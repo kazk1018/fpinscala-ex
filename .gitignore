@@ -1,0 +1,12 @@
+# Intellij IDEA
+*.iml
+.idea/
+
+# Scala
+i*.class
+out
+build
+target/
+
+.DS_Store
+*~
