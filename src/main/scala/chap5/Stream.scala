@@ -44,7 +44,7 @@ trait Stream[+A] {
     foldRight(Stream.empty[A])((a, b) => if (p(a)) Stream.cons(a, b) else Stream.empty)
 
   def headOptionViaFoldRight: Option[A] =
-    foldRight(None[A])((h, _) => Some(h))
+    foldRight(None: Option[A])((h, _) => Some(h))
 
   def map[B](f: A => B): Stream[B] = this match {
     case Cons(h, t) => Stream.cons(f(h()), t().map(f))
